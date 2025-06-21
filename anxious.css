@@ -1,0 +1,97 @@
+body {
+  background-color: #fff686;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+/* Container appearance */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  border: 3px dashed #e6d160;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: floatIn 1.8s ease-out forwards;
+}
+
+/* Floaty animation */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(20px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gentle float loop (optional for a lazy "breathing" effect) */
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-in {
+  animation: floatIn 1.8s ease-out forwards, gentleFloat 6s ease-in-out infinite;
+}
+
+/* Typography */
+.title {
+  font-size: 2.5rem;
+  color: #9e8d16;
+  margin-bottom: 1rem;
+}
+
+.sanskrit {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.translation {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background-color: #e6d160;
+  color: #000;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #c6b542;
+}

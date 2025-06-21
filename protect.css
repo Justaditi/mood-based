@@ -1,0 +1,84 @@
+body {
+  background-color: #ffbe96;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+/* Main card */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  border: 3px solid #e8895d;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: protectPop 1s ease-out forwards;
+}
+
+/* Title and text */
+.title {
+  font-size: 2.5rem;
+  color: #a3471e;
+  margin-bottom: 1rem;
+}
+
+.sanskrit {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.translation {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background-color: #e8895d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #c8633c;
+}
+
+/* Animation — Shield entrance */
+@keyframes protectPop {
+  0% {
+    transform: scale(0.8) rotate(-2deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.shield-in {
+  animation: protectPop 1s ease-out forwards;
+}

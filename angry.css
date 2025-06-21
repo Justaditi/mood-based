@@ -1,0 +1,86 @@
+body {
+  background-color: #ff9393;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+/* Container style */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border: 3px dashed #e24848;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+/* Angry "slap" entry */
+@keyframes zoomAndShake {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-3deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) rotate(2deg);
+  }
+  80% {
+    transform: scale(0.98) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.zoom-pop {
+  animation: zoomAndShake 0.9s ease-out forwards;
+}
+
+/* Typography */
+.title {
+  font-size: 2.5rem;
+  color: #911e1e;
+  margin-bottom: 1rem;
+}
+
+.sanskrit {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.translation {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background-color: #e24848;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #c0392b;
+}
